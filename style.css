@@ -1,0 +1,221 @@
+/* ================================
+   CSS BY  Bradley Christensen
+   ================================ */
+
+
+/* ================================
+   IMPORTED FONTS
+   ================================ 
+   Importing Libre Franklin font from Google Fonts.
+   */
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400;700&display=swap');
+
+/* ================================
+   CSS RESET
+   ================================    
+   Remove default browser styles for consistency.
+*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ================================
+   ROOT VARIABLES
+   ================================ 
+   Define color and typography variables for theming.
+   */
+:root {
+    --color-primary: #2c3e50;
+    --color-secondary: #34495e;
+    --color-text: #333;
+    --color-text-light: #666;
+    --color-white: #fff;
+    --font-family: 'Libre Franklin', Helvetica,Arial, sans-serif;
+    --line-height: 1.6;
+}
+
+/* ================================
+   GLOBAL STYLES
+   ================================ 
+   Styles for body, headers, navigation, main content, and footer.
+   */
+body {
+    font-family: var(--font-family);
+    line-height: var(--line-height);
+    color: var(--color-text);
+}
+
+/* Header */
+header {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 1.5rem;
+}
+
+/* Navigation */
+nav {
+    background-color: var(--color-secondary);
+    padding: 10px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+nav ul li a {
+    color: var(--color-white);
+    text-decoration: none;
+    padding: 10px 15px;
+    transition: background-color 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: var(--color-primary);
+    border-radius: 5px;
+}
+
+/* Main Content */
+main {
+    padding: 20px 15px;
+    min-height: 60vh;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+main section h2 {
+    margin-bottom: 15px;
+    color: var(--color-primary);
+    font-size: 1.25rem;
+}
+
+main section p {
+    color: var(--color-text-light);
+    font-size: 0.95rem;
+}
+
+/* Footer */
+footer {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    text-align: center;
+    padding: 20px;
+    margin-top: auto;
+}
+
+/* ================================
+   MEDIA QUERY (medium) - 768px+
+   ================================ 
+   Medium screen adjustments for better layout.
+   */
+@media (min-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    nav ul {
+        flex-direction: row;
+        gap: 15px;
+    }
+
+    main {
+        padding: 30px 25px;
+    }
+
+    main section h2 {
+        font-size: 1.5rem;
+    }
+
+    main section p {
+        font-size: 1rem;
+    }
+}
+
+/* ================================
+   MEDIA QUERY (large) - 992px+
+   ================================ 
+   Large screen adjustments for enhanced readability.
+   */
+@media (min-width: 992px) {
+    header {
+        padding: 30px;
+    }
+
+    header h1 {
+        font-size: 2.5rem;
+    }
+
+    nav ul {
+        gap: 25px;
+    }
+
+    nav ul li a {
+        padding: 12px 20px;
+    }
+
+    main {
+        padding: 50px 40px;
+        max-width: 960px;
+    }
+
+    main section h2 {
+        font-size: 1.75rem;
+    }
+
+    main section p {
+        font-size: 1.1rem;
+        line-height: 1.8;
+    }
+}
+
+/* ================================
+   MEDIA QUERY (xl) - 1200px+
+   ================================ 
+   Extra large screen adjustments for optimal layout.
+   */
+@media (min-width: 1200px) {
+    header {
+        padding: 40px;
+    }
+
+    header h1 {
+        font-size: 3rem;
+    }
+
+    nav ul {
+        gap: 35px;
+    }
+
+    nav ul li a {
+        padding: 15px 25px;
+        font-size: 1.1rem;
+    }
+
+    main {
+        padding: 60px 50px;
+        max-width: 1140px;
+    }
+
+    main section h2 {
+        font-size: 2rem;
+    }
+
+    main section p {
+        font-size: 1.15rem;
+    }
+
+    footer {
+        padding: 30px;
+    }
+}
